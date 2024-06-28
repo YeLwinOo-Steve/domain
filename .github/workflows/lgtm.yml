@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v2
+      - uses: actions/checkout@v4
       - uses: micnncim/action-lgtm-reaction@master
         env: 
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
