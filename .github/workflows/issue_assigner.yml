@@ -11,4 +11,4 @@ jobs:
         uses: pozil/auto-assign-issue@v2
         with:
           repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          assignees: owner
+          assignees: YeLwinOo-Steve
