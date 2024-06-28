@@ -10,5 +10,5 @@ jobs:
       - name: 'Auto Assign'
         uses: pozil/auto-assign-issue@v2
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           assignees: owner
