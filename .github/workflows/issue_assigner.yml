@@ -11,4 +11,4 @@ jobs:
         uses: pozil/auto-assign-issue@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          assignees: YeLwinOo-Steve
+          assignees: owner
