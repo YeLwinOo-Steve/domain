@@ -1,0 +1,22 @@
+name: Send LGTM GIF
+on:
+  push:
+    branches:
+      - dev
+  issue_comment:
+    types: [created]
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v2
+      - uses: micnncim/action-lgtm-reaction@master
+        env: 
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          GIPHY_API_KEY: ${{ secrets.LGTM_GIF_KEY }}
+          trigger: '[".*looks good to me.*"]'
+          override: true
+          source: 'giphy'
