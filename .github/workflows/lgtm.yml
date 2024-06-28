@@ -1,15 +1,12 @@
 name: Send LGTM GIF
 on:
-  push:
-    branches:
-      - dev
   issue_comment:
     types: [created]
   pull_request_review:
     types: [submitted]
 
 jobs:
-  build:
+  send-lgtm-gif:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
