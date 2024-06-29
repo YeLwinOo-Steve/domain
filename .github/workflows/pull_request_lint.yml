@@ -1,0 +1,16 @@
+name: Pull Request Linting
+on:
+  pull_request:
+    types: [opened, edited, deleted]
+
+jobs:
+  pull-request-linting:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+    steps:
+      - name: Checkout code
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v6
