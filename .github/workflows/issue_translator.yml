@@ -9,8 +9,6 @@ jobs:
   issue-translator:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout actions
       - uses: actions/checkout@v4
-      - name: Translate issue
       - uses: tomsun28/issues-translate-action@v2.7
     
