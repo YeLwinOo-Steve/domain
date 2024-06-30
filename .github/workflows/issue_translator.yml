@@ -1,9 +1,9 @@
 name: Issue Translator
 on: 
   issues:
-    types: [opened]
+    types: [opened, edited]
   issue_comment:
-    types: [created]
+    types: [created, edited]
 
 jobs:
   issue-translator:
